@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="TIJM-finance, financieel advies op maat voor bedrijven en particulieren.">
     <title>TIJM-finance: Advies &amp; Belasting</title>
     <link href="/images/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
@@ -86,6 +87,11 @@
             opacity: 1;
             transition: opacity 0.5s ease;
             backdrop-filter: blur(5px);
+        }
+
+        .hero-overlay h1 {
+            margin-bottom: 20px;
+            font-size: 3rem;
         }
 
         .hero-overlay h2 {
@@ -209,8 +215,12 @@
                 margin-bottom: 20px;
             }
 
+            .hero-overlay h1 {
+                font-size: 1.3rem;
+            }
+
             .hero-overlay h2 {
-                font-size: 1.5rem;
+                font-size: 1.3rem;
             }
 
             #top-banner-address {
@@ -248,7 +258,7 @@
         <img id="heroImage" class="hero-image" src="/images/slider1.jpg" alt="Hero Image">
         <div class="hero-overlay">
             <div class="hero-box">
-                <h2>Uitstekend Advies</h2>
+                <h1>Uitstekend advies</h1>
                 <p id="hero-box-text">Financieel advies op maat voor bedrijven en particulieren</p>
                 <a href="mailto:frans@tijm-finance.nl" class="contact-button">CONTACT</a>
             </div>
@@ -336,15 +346,15 @@
         document.addEventListener('DOMContentLoaded', () => {
             const heroImage = document.getElementById('heroImage');
             const heroBox = document.querySelector('.hero-box');
-            const heroTitle = heroBox.querySelector('h2');
+            const heroTitle = heroBox.querySelector('h1');
             const heroText = heroBox.querySelector('p');
             const heroButton = heroBox.querySelector('.contact-button');
 
             const images = [
+                { src: '/images/slider1.jpg', title: 'Uitstekend advies', text: 'Financieel advies op maat voor bedrijven en particulieren' },
                 { src: '/images/slider2.jpg', title: 'Belasting goed en gemakkelijk', text: 'Als belastingdeskundige regel ik uw fiscale zaken' },
                 { src: '/images/slider3.jpg', title: 'Hoge deskundigheid', text: '40+ jaar evaring in bedrijfskunde: onze "finance dokter" kan u goed helpen!' },
-                { src: '/images/slider4.jpg', title: 'Kwaliteit voor een scherpe prijs', text: 'Weinig overhead, lage kantoorkosten' },
-                { src: '/images/slider1.jpg', title: 'Uitstekend advies', text: 'Financieel advies op maat voor bedrijven en particulieren' }
+                { src: '/images/slider4.jpg', title: 'Kwaliteit voor een scherpe prijs', text: 'Weinig overhead, lage kantoorkosten' }
             ];
             let currentImageIndex = 0;
 
